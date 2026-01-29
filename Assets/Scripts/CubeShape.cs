@@ -1,16 +1,17 @@
 using UnityEngine;
 
-public class CubeShape : MonoBehaviour
+public class CubeShape : Shape
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        ShapeName = "Cube";
+        ShapeColor = Color.red;
     }
+    public override void DisplayText()      //POLYMORPHISM
+    {
+        Debug.Log($"this is a {ShapeName}. It's strong and solid.");
+    }
+    
 }

@@ -1,16 +1,15 @@
 using UnityEngine;
 
-public class CapsuleShape : MonoBehaviour
+public class CapsuleShape : Shape
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
-        
+        ShapeName = "Capsule";
+        ShapeColor = Color.blue;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void DisplayText() // POLYMORPHISM
     {
-        
+        Debug.Log($"This is a {ShapeName}. It's tall and flexible.");
     }
 }

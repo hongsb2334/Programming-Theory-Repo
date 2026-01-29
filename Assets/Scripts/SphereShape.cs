@@ -1,16 +1,17 @@
 using UnityEngine;
 
-public class SphereShape : MonoBehaviour
+public class SphereShape : Shape
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+
+    private void Awake()
     {
-        
+        ShapeName = "Sphere";
+        ShapeColor = Color.green;
     }
+    public override void DisplayText()  //POLYMORPHISM
+    {
+        Debug.Log($"This is a {ShapeName}. It's smooth and round.");
+    }
+    
 }
